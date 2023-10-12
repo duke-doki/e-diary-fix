@@ -1,31 +1,38 @@
 # e-diary-fix
 
 Allows you to fix bad marks, remove chastisements and make comendations.
-For every function to use some models must be imported:
+
+## Installation
+
+To use these scripts you need to download `scripts.py` on your server. 
+Then run the following commands:
 ```
-from datacenter.models import {model}
+python manage.py shell
+```
+```
+import scripts
 ```
 
 ### fix_marks
 
-This function allows you to fix marks, to use it type the following (`Schoolkid` and
-`Mark` must be imported):
+This function allows you to fix marks, to use it type the following:
 
 ```
-fix_marks({schoolkid name})
+scripts.fix_marks({schoolkid name})
 ```
 
 ### remove_chastisements
 
-To remove the unwanted chastisements use(`Schoolkid` must be imported):
+To remove the unwanted chastisements use:
 ```
-remove_chastisements({schoolkid name})
+scripts.remove_chastisements({schoolkid name})
 ```
 
 ### create_commendation
 
-To create a commendation use(`Schoolkid`, `Subject`, `Lesson` and `Commendation` 
-must be imported):
+To create a commendation use:
 ```
-create_commendation({schoolkid name}, {subject name})
+scripts.create_commendation({schoolkid name}, {subject name})
 ```
+
+`commends.txt` contains variations of commendations that can me edited.
